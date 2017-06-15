@@ -1,0 +1,97 @@
+
+{% extends "base.html" %}
+{% load staticfiles %}
+{% load crispy_forms_tags %}
+
+{% block head_title %} Welcome | {% endblock %}
+
+<style >
+
+</style>
+
+{% block jumbotron %}
+</br>
+               
+                <div class="row">
+                    <div class="col-lg-6 text-center">
+                        <div class="thumbnail absolute-box init-block" style="background-color: black">
+                            <div class="caption">
+                                 <p>
+                <a class="btn btn-lg btn-primary" href="{% url 'about' %}" role="button">Why Nai Hustle? </a>
+                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 text-center">
+                        <div class="thumbnail" style="background-color: black">
+                            <div class="caption">
+                            <p>
+                                <a class="btn btn-lg btn-primary" href="{% url 'register' %}" role="button">Get Started Today &raquo;</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /.row -->
+
+                <div class="row">
+                    <div class="col-lg-4 text-center">
+                        <div class="thumbnail" style="background-color: black">
+                            <div class="panel-body">
+                            <p>
+                                <a class="btn btn-lg btn-primary" href="{% url 'home_business' %}" role="button">Search Business </a> 
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 text-center">
+                        <div class="thumbnail" style="background-color: black">
+                            <div class="panel-body">
+                            <p>
+                               <a class="btn btn-lg btn-primary" href="{% url 'list' %}"role="button">View Business</a>
+                               </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 text-center">
+                        <div class="thumbnail" style="background-color: black">
+                            <div class="panel-body">
+                            <p>
+                                <a class="btn btn-lg btn-primary" href="{% url 'home_business' %}"role="button">BYOB</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+
+
+
+{% endblock %}
+
+{% block content %}
+
+
+<div class="row container-fluid">	   
+
+<div class="col-sm-4 home-2" style="background-color: gray; height: 500px">
+<p class="lead text-align-center">Bulit For Own Boss Initiative</p>
+<img src="{% static 'img/blaze-kenya-by-safaricom.jpg' %}" class="img-responsive">
+</div>
+
+<div class="col-sm-4 home-2" style="background-color:gray; height: 500px">
+<p class="lead text-align-center">Market Your Biz The Smart Way </p>
+<img src="{% static 'img/Kora-edibles.JPG' %}" class="img-responsive">
+</div>
+
+
+<div class="col-sm-4 home-2" style="background-color:gray; height: 500px">
+<p class="lead text-align-center">From Fashion To Design </p>
+<img src="{% static 'img/vazzi.JPG' %}" class="img-responsive">
+</div>
+</div>
+</div>
+{% endblock %}
+
+
+

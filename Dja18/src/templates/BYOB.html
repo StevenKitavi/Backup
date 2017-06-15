@@ -1,0 +1,90 @@
+{% extends "base.html" %}
+{% load staticfiles%}
+
+
+{% block ownboss %}
+<div class="introduction-header">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12">
+				<div class="introduction-message">
+					<h1>Be Your Own Boss</h1>
+					<h3>Market your biz the smart way</h3>
+					<hr class="introduction-divider">
+					<ul class="list-inline intro-social-buttons">
+						<li>
+							<a href="#" class="btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i><span class="network-name">Twitter</span></a>
+						</li>
+						<li>
+							<a href="#" class="btn btn-default btn-lg"><i class="fa fa-instagram fa-fw"></i>
+							<span class="network-name">Instagram</span></a>
+						</li>
+						<li>
+							<a href="#" class="btn btn-default btn-lg"><i class="fa fa-linkedin fa-fw"></i>
+							<span class="network-name">Linked In</span></a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="biz-section-a">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-5 col-sm-6">
+				<hr class="section-heading-spacer">
+				<div class="clearfix"></div>
+
+				<h2 class="section-heading">Vazzi Clothing:<br>
+				Fashion Category</h2>
+				<p class="lead">Embrace your fashion style from your nearest fashion provider <br>
+				visit their stall located on Ngong road for the best of their best</p>
+
+			</div>
+			<div class="col-lg-5 col-lg-offset-2 col-sm-6">
+				<img class="img-responsive" src="{% static 'img/vazzi.JPG' %}" alt="">
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="biz-section-b">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-5 col-lg-offset-1 col-sm-push-6 col-sm-6">
+				<hr class="section-heading-spacer">
+				<div class="clearfix"></div>
+				<h2 class="section-heading">BYOB By Safaricom <br>
+				The leading Youth Platform</h2>
+				<p class="lead"> Innovate with us, we boost your idea and push you into the market<br>
+				by familiarizing your business with your target clients<br>
+				market your biz the smart way. Be your boss and place your business on a competitive environment to stand out with us </p>
+			</div>
+			<div class="col-lg-5  col-sm-pull-6 col-sm-6">
+				<img class="img-responsive" src="{% static 'img/blaze-kenya-by-safaricom.jpg' %}" alt="">
+			</div>
+		</div>
+	</div>
+</div>
+<div class="biz-section-a">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-5 col-sm-6">
+				<hr class="section-heading-spacer">
+				<div class="clearfix"></div>
+				<h2 class="section-heading">Kora Edibles<br>
+				Stay foody with your favourite restaurant</h2>
+				<p class="lead">Find your favourite nearest restaurant in town<br>
+				know your favourite hang out joint in town while you can have a drink
+			</div>
+			<div class="col-lg-5 col-lg-offset-2 col-sm-6">
+				<img src="{% static 'img/Kora-edibles.JPG' %}" class="img-responsive">
+			</div>
+		</div>
+	</div>
+</div>
+
+
+{% endblock %}

@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% include 'base/css.html' %}
+{% include 'base/bootstrap_defaults.html' %}
+
+{% block master_report  %}
+<title>Nai Hustle Reports</title>
+
+	<div class="container">
+		{% block chartContent %}
+		{% endblock %}
+	</div>
+	{% include 'base/js.html' %}
+	<script>
+	$(document). ready(function(){
+		{% block jquery %}
+		{% endblock %}
+	})
+	</script>
+</body>
+{% endblock master_report %}

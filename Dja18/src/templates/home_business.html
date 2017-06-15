@@ -1,0 +1,72 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+
+{%block home_biz %}
+
+
+<br/>
+<div class="container-fluid">
+<div class="panel-group">
+	
+	<div class="panel panel-primary">
+	  <div class="panel-heading">Panel heading </div>
+		<div class="panel-body">
+         <div class="jumbotron">
+          <div class="row">
+				<div class="col-sm-12">
+               
+                 </br>
+                <p>
+				<a class="btn btn-lg btn-primary" href="{%url 'list' %}" role="button">Fashion & Design &raquo;</a> <a class="btn btn-lg btn-primary" href="{% url 'list' %}" role="button">Food Industry &raquo;</a>  <a class="btn btn-lg btn-primary" href="{% url 'list' %}" role="button">Electronics &raquo; </a> <a class="btn btn-lg btn-primary" href="{% url 'list' %}"role="button">Entertainment &raquo;</a> <a class="btn btn-lg btn-primary" href="{% url 'list' %}"role="button">Environment & Sanitation &raquo;</a>
+				<a class="btn btn-lg btn-primary" href="{% url 'list' %}" role="button">Specify &raquo; </a>
+                 </p>
+
+                
+				
+				</div>
+				</div> 
+
+
+
+</div>
+</div>
+
+		 </div>
+	</div>
+</div>
+ 			
+ 		 <div class="col-sm-6 col-sm-offset-3" style="background-color: gray">
+
+			     <form method="GET" action="">
+	             <input type="text" name="naay" placeholder="find business" value="{{ request.GET.naay}}"/>
+	             <input type="submit" value="Search"/>
+                 </form>
+
+                  {% for obj in object_list  %}
+		             <div class="row">
+                 	<div class="col-sm-12">
+                 		<div class="thumbnail" style="background-color: black">
+                 			<div class="caption">
+                 			<h3><a href="{{ obj.get_absolute_url }}">{{ obj.title }}</a></h3>
+                 				<h1>{{ title }}</h1>
+										<h3>Category: <small>{{ obj.category }}</small></h3></br>
+										{% if obj.image %}
+										 	<img src="{{ obj.image.url }}" class="img-responsive" />
+										{% endif %}
+
+										<h3>Description: </h3>{{ obj.description }}</br>
+										<h3>Location: </h3>  {{ obj.location }}</br>
+
+                 			</div>
+                 		</div>
+                 	</div> 
+                 </div>
+
+
+                 {% endfor%}
+                 </div>
+		</div>
+
+{% endblock %}
+
